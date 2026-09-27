@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monday Weekly Prep — 28 September 2026 | Engineering Cockpit</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+  <!-- Top Application Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="app-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">ENGINEERING COCKPIT</span>
+          <span class="logo-badge">JARVIS TPM INTELLIGENCE</span>
+        </div>
+      </div>
+      <div class="header-divider"></div>
+      <div class="header-context">
+        <h1 class="header-main-title">Monday Weekly Prep — 28 September 2026</h1>
+        <div class="header-meta">
+          <span class="meta-tag"><span class="dot pulse"></span> Sunday Prep Baseline: 27 Sep 2026</span>
+          <span class="meta-tag meta-pill">Lead: <strong>Alexandru TIRON</strong></span>
+          <span class="meta-tag meta-pill">Timezone: <strong>Bucharest (EEST)</strong></span>
+          <span class="meta-tag meta-pill highlight">Focus: <strong>September Closeout & W40 Gate Review</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="global-search" placeholder="Search MO, INI, Person, Planning #..." autocomplete="off">
+        <button id="clear-search" class="clear-search-btn" title="Clear search" style="display: none;">&times;</button>
+      </div>
+
+      <div class="header-actions">
+        <button id="btn-export-script" class="btn btn-secondary" title="Generate and copy executive standup script">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Standup Brief
+        </button>
+        <button id="btn-print" class="btn btn-secondary" title="Print Executive Brief / Save as PDF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print
+        </button>
+        <button id="theme-toggle" class="btn btn-icon" title="Toggle Light/Dark Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Executive Flash Banner: System Source & First Decision Alert -->
+  <div class="exec-banner">
+    <div class="banner-icon-col">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+    </div>
+    <div class="banner-content">
+      <div class="banner-title">CRITICAL MONDAY DIRECTIVE: SEPTEMBER CLOSEOUT & TR VERIFICATION</div>
+      <p class="banner-desc">
+        <strong>Your first decision on Monday is the September closeout.</strong> <code>Dataset_New</code> has <strong>47 MOs</strong> assigned to Alexandru TIRON in <em>“In engineering Work”</em>: 13 carry dates before September, 9 have September Last TR dates, 7 October, 3 November, and 15 later. These are source dates and states, <strong>not 47 confirmed unfinished releases</strong>. Sciforma contains old completed plans for some MOs and no matching plan for others, so the first pass must establish which technical releases were actually handed over.
+      </p>
+      <div class="banner-data-tags">
+        <span class="source-tag">Master: <strong>Dataset_New.csv (27-Sep-2026)</strong></span>
+        <span class="source-tag">Planning: <strong>Sciforma Planning Extract</strong></span>
+        <span class="source-tag">Timesheet Audit: <strong>8,540 retained Argeș rows</strong> (45,454 scanned)</span>
+        <span class="source-tag warning">Forecast / Tracking: <strong>Missing in /JARVIS/ folder</strong> (Dates reconstructed)</span>
+      </div>
+    </div>
+    <div class="banner-stat-summary">
+      <div class="banner-kpi">
+        <span class="kpi-num">47</span>
+        <span class="kpi-lbl">Active MOs</span>
+      </div>
+      <div class="banner-kpi alert">
+        <span class="kpi-num">9</span>
+        <span class="kpi-lbl">Sept Last TR</span>
+      </div>
+      <div class="banner-kpi warning">
+        <span class="kpi-num">8</span>
+        <span class="kpi-lbl">DO TODAY Gates</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI Metrics Ribbon -->
+  <section class="kpi-grid">
+    <div class="kpi-card" data-filter-target="all" onclick="filterByKpi('all')">
+      <div class="kpi-icon-wrap blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      </div>
+      <div class="kpi-info">
+        <div class="kpi-value">47 <span class="kpi-sub">Total Active</span></div>
+        <div class="kpi-label">"In Engineering Work"</div>
+        <div class="kpi-breakdown">13 Pre-Sep · 9 Sep · 7 Oct · 3 Nov · 15 Later</div>
+      </div>
+    </div>
+
+    <div class="kpi-card highlight-red" data-filter-target="do-today" onclick="filterByKpi('do-today')">
+      <div class="kpi-icon-wrap red">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+      </div>
+      <div class="kpi-info">
+        <div class="kpi-value red-text">8 <span class="kpi-sub">Urgent Reviews</span></div>
+        <div class="kpi-label">DO TODAY — Monday 28 Sep</div>
+        <div class="kpi-breakdown">30 Sep Gate review & TR commitment verification</div>
+      </div>
+    </div>
+
+    <div class="kpi-card highlight-amber" data-filter-target="protect" onclick="filterByKpi('protect')">
+      <div class="kpi-icon-wrap amber">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <div class="kpi-info">
+        <div class="kpi-value amber-text">5 <span class="kpi-sub">Critical Handoffs</span></div>
+        <div class="kpi-label">PROTECT THIS WEEK</div>
+        <div class="kpi-breakdown">Secure test chains & design evidence</div>
+      </div>
+    </div>
+
+    <div class="kpi-card highlight-purple" data-filter-target="start-next" onclick="filterByKpi('start-next')">
+      <div class="kpi-icon-wrap purple">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+      </div>
+      <div class="kpi-info">
+        <div class="kpi-value purple-text">4 <span class="kpi-sub">Readiness Checks</span></div>
+        <div class="kpi-label">START NEXT (W40)</div>
+        <div class="kpi-breakdown">Confirm inputs & reserve named owners</div>
+      </div>
+    </div>
+
+    <div class="kpi-card highlight-red-border" data-filter-target="capacity" onclick="filterByKpi('capacity')">
+      <div class="kpi-icon-wrap red-pulse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+      </div>
+      <div class="kpi-info">
+        <div class="kpi-value red-text">2 Overloads <span class="kpi-sub">W40</span></div>
+        <div class="kpi-label">Capacity Arbitrations</div>
+        <div class="kpi-breakdown">Endurance: 104% · Mech Test: 96.7% (Tight)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Tab Bar -->
+  <nav class="main-nav">
+    <div class="nav-tabs" id="nav-tabs">
+      <button class="nav-tab active" data-tab="tab-do-today">
+        <span class="tab-badge red">8</span>
+        DO TODAY (28 Sep)
+      </button>
+      <button class="nav-tab" data-tab="tab-protect">
+        <span class="tab-badge amber">5</span>
+        PROTECT THIS WEEK
+      </button>
+      <button class="nav-tab" data-tab="tab-start">
+        <span class="tab-badge purple">4</span>
+        START NEXT
+      </button>
+      <button class="nav-tab" data-tab="tab-action-board">
+        <span class="tab-badge blue">Board</span>
+        Monday Action Board
+      </button>
+      <button class="nav-tab" data-tab="tab-capacity">
+        <span class="tab-badge red-pulse">W40</span>
+        Capacity & Arbitration
+      </button>
+      <button class="nav-tab" data-tab="tab-confidence">
+        <span class="tab-badge cyan">N / N+1 / N+2</span>
+        Delivery Confidence
+      </button>
+      <button class="nav-tab" data-tab="tab-discrepancies">
+        <span class="tab-badge orange">Audit</span>
+        System Disagreements
+      </button>
+    </div>
+    <div class="tab-aux-info">
+      <span id="active-item-count" class="item-count-pill">Showing 8 priority initiatives</span>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: DO TODAY (Monday 28 September) -->
+    <!-- ========================================== -->
+    <div id="tab-do-today" class="tab-pane active">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="badge-pill red">IMMEDIATE 30 SEP GATE DECISIONS</div>
+          <h2>DO TODAY — Monday 28 September</h2>
+          <p class="section-subtitle">
+            Put the 30 Sep Dataset Last TR on a gate review. Obtain actual design, test and release evidence from each owner; decide whether 30 Sep remains a credible handover date or escalate immediate plan corrections.
+          </p>
+        </div>
+        <div class="section-toolbar">
+          <div class="filter-group">
+            <label>Filter Status:</label>
+            <select id="filter-do-today-status" class="select-input">
+              <option value="all">All Gate Statuses</option>
+              <option value="pending">Pending Gate Review</option>
+              <option value="verified">Verified Handed Over</option>
+              <option value="escalated">Escalate Date / Replan</option>
+            </select>
+          </div>
+          <button class="btn btn-sm btn-outline" onclick="markAllCompleted('do-today')">Check All</button>
+          <button class="btn btn-sm btn-outline" onclick="resetAllStates('do-today')">Reset State</button>
+        </div>
+      </div>
+
+      <!-- Decision Progress Tracker -->
+      <div class="progress-bar-container">
+        <div class="progress-header">
+          <span>Gate Decisions Closed: <strong id="do-today-progress-text">0 of 8 Decided</strong></span>
+          <span id="do-today-progress-percent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div id="do-today-progress-fill" class="progress-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="do-today-cards">
+        <!-- Rendered dynamically by app.js with rich details & interactive decision status -->
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 2: PROTECT THIS WEEK -->
+    <!-- ========================================== -->
+    <div id="tab-protect" class="tab-pane">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="badge-pill amber">TEST CHAIN & DELIVERY GATES</div>
+          <h2>PROTECT THIS WEEK</h2>
+          <p class="section-subtitle">
+            <strong>Protect the 30 September release decision</strong>, then the October test chain. Secure the final design/release evidence, confirm tester names, and verify handoffs before silently declaring anything done.
+          </p>
+        </div>
+        <div class="section-toolbar">
+          <div class="status-summary-pill amber-bg">5 Critical Test & Handoff Initiatives</div>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="protect-cards">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 3: START NEXT (W40) -->
+    <!-- ========================================== -->
+    <div id="tab-start" class="tab-pane">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="badge-pill purple">INPUT READINESS & RESOURCE RESERVATION</div>
+          <h2>START NEXT</h2>
+          <p class="section-subtitle">
+            Start means <strong>confirm readiness and reserve a real owner</strong>, not launch work based solely on a low workload total.
+          </p>
+        </div>
+        <div class="section-toolbar">
+          <div class="status-summary-pill purple-bg">4 Work Packages Requiring Setup</div>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="start-cards">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 4: MONDAY ACTION BOARD (Interactive Kanban) -->
+    <!-- ========================================== -->
+    <div id="tab-action-board" class="tab-pane">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="badge-pill blue">INTERACTIVE MONDAY RUNBOOK</div>
+          <h2>Monday Action Board</h2>
+          <p class="section-subtitle">
+            Structured execution matrix for Monday morning: track what to decide, what to ask, what to start, what to protect, and what master data to correct. Check off items as you proceed.
+          </p>
+        </div>
+        <div class="section-toolbar">
+          <button id="btn-copy-board" class="btn btn-secondary btn-sm" onclick="copyActionBoardText()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy Board Summary
+          </button>
+        </div>
+      </div>
+
+      <div class="kanban-grid">
+        <!-- DO TODAY Column -->
+        <div class="kanban-col col-red">
+          <div class="kanban-col-header">
+            <div class="kanban-title"><span class="k-dot red"></span> DO TODAY</div>
+            <span class="kanban-count" id="count-kanban-do-today">5</span>
+          </div>
+          <p class="kanban-col-desc">30 Sep gate decisions & release evidence checks</p>
+          <div class="kanban-items" id="kanban-do-today">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+
+        <!-- ASK THIS WEEK Column -->
+        <div class="kanban-col col-amber">
+          <div class="kanban-col-header">
+            <div class="kanban-title"><span class="k-dot amber"></span> ASK THIS WEEK</div>
+            <span class="kanban-count" id="count-kanban-ask">5</span>
+          </div>
+          <p class="kanban-col-desc">Test acceptance, final design status & team bookings</p>
+          <div class="kanban-items" id="kanban-ask">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+
+        <!-- START NEXT Column -->
+        <div class="kanban-col col-purple">
+          <div class="kanban-col-header">
+            <div class="kanban-title"><span class="k-dot purple"></span> START NEXT</div>
+            <span class="kanban-count" id="count-kanban-start">4</span>
+          </div>
+          <p class="kanban-col-desc">Name owners, validate inputs, arbitrate scopes</p>
+          <div class="kanban-items" id="kanban-start">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+
+        <!-- PROTECT Column -->
+        <div class="kanban-col col-cyan">
+          <div class="kanban-col-header">
+            <div class="kanban-title"><span class="k-dot cyan"></span> PROTECT</div>
+            <span class="kanban-count" id="count-kanban-protect">2</span>
+          </div>
+          <p class="kanban-col-desc">TR handover vs planned finish vs factory delivery</p>
+          <div class="kanban-items" id="kanban-protect">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+
+        <!-- DATA TO CORRECT Column -->
+        <div class="kanban-col col-orange">
+          <div class="kanban-col-header">
+            <div class="kanban-title"><span class="k-dot orange"></span> DATA TO CORRECT</div>
+            <span class="kanban-count" id="count-kanban-correct">4</span>
+          </div>
+          <p class="kanban-col-desc">Dataset vs Sciforma dates, missing plans, placeholders</p>
+          <div class="kanban-items" id="kanban-correct">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 5: CAPACITY & ARBITRATION (Argeș Teams W40) -->
+    <!-- ========================================== -->
+    <div id="tab-capacity" class="tab-pane">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="badge-pill red">W40 WORKLOAD ARBITRATION (28 SEP)</div>
+          <h2>Capacity to Arbitrate — Argeș Teams</h2>
+          <p class="section-subtitle">
+            The W40 capture is <strong>week beginning 28 September</strong>. It records scheduled workload and “Capacitory”; it does not prove that unallocated team hours are usable for a specific initiative.
+          </p>
+        </div>
+      </div>
+
+      <!-- Capacity Alert Callout Cards -->
+      <div class="alert-box-grid">
+        <div class="callout-card callout-danger">
+          <div class="callout-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <div class="callout-title">CRITICAL OVERLOAD: Endurance Team (208 / 200 h · 104%)</div>
+          </div>
+          <div class="callout-body">
+            <p><strong>Driver 1</strong> is booked for <strong>51 / 40 h</strong> (127.5%) and <strong>Darius Serban</strong> has <strong>41 / 40 h</strong> (102.5%).</p>
+            <div class="callout-action">
+              <strong>Arbitration Required:</strong> Protect the <strong>COMPACT battery test slot</strong> (MO-003436 / #3970–3971) and resolve competing test allocations immediately before starting new runs.
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-card callout-warning">
+          <div class="callout-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <div class="callout-title">TIGHT BOTTLENECK: Mechanical Test (193.4 / 200 h · 96.7%)</div>
+          </div>
+          <div class="callout-body">
+            <p><strong>Mircea Butoi</strong> shows <strong>80.2 h against 40 h</strong> (200.5% double allocation) in the capture.</p>
+            <div class="callout-action">
+              <strong>Audit Required:</strong> Requires row/booking verification before treating that as executable capacity. Validate whether entries represent double-booked tasks or misallocated time codes.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Capacity Visual Meters Table -->
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3>Argeș Engineering Discipline Capacity (W40)</h3>
+          <span class="meta-note">Source: Weekly Workload Capture (27-Sep-2026)</span>
+        </div>
+        <div class="capacity-table-wrap">
+          <table class="data-table capacity-table">
+            <thead>
+              <tr>
+                <th style="width: 220px;">Argeș Team</th>
+                <th style="width: 140px;">Workload / Capacitory</th>
+                <th style="width: 160px;">Utilization Meter</th>
+                <th>Status & Arbitration Decision</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="team-cell">
+                  <div class="team-name">System Design</div>
+                  <div class="team-lead-note">Bucharest / Argeș</div>
+                </td>
+                <td class="hours-cell">
+                  <span class="workload-bold">80</span> / <span class="cap-dim">320 h</span>
+                  <div class="pct-badge green-badge">25.0% Load</div>
+                </td>
+                <td>
+                  <div class="utilization-bar">
+                    <div class="util-fill green" style="width: 25%;"></div>
+                  </div>
+                </td>
+                <td class="decision-cell">
+                  <div class="decision-text">
+                    <strong>Apparent room at team level</strong>, but September/October rows are mostly <strong>soft team assignments</strong> (e.g. #4283, #4501–4503, #4512–4514).
+                  </div>
+                  <div class="tag-recommendation">Confirm named specialties & real engineer availability before committing delivery.</div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="team-cell">
+                  <div class="team-name">Mechanical Design</div>
+                  <div class="team-lead-note">Bucharest / Argeș</div>
+                </td>
+                <td class="hours-cell">
+                  <span class="workload-bold">56</span> / <span class="cap-dim">160 h</span>
+                  <div class="pct-badge green-badge">35.0% Load</div>
+                </td>
+                <td>
+                  <div class="utilization-bar">
+                    <div class="util-fill green" style="width: 35%;"></div>
+                  </div>
+                </td>
+                <td class="decision-cell">
+                  <div class="decision-text">
+                    <strong>Apparent room</strong>; assign the unowned September corrections and October starts.
+                  </div>
+                  <div class="tag-recommendation">Assign named owners to MO-003520 (#4278), MO-003473 (#4096), MO-003484 (#4130), and MO-003592.</div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="team-cell">
+                  <div class="team-name">Combined System/Soft Test</div>
+                  <div class="team-lead-note">T&V Argeș</div>
+                </td>
+                <td class="hours-cell">
+                  <span class="workload-bold">56</span> / <span class="cap-dim">160 h</span>
+                  <div class="pct-badge green-badge">35.0% Load</div>
+                </td>
+                <td>
+                  <div class="utilization-bar">
+                    <div class="util-fill green" style="width: 35%;"></div>
+                  </div>
+                </td>
+                <td class="decision-cell">
+                  <div class="decision-text">
+                    <strong>Apparent team room</strong>, but several release tests have <strong>no named person</strong>.
+                  </div>
+                  <div class="tag-recommendation">Confirm who can accept the work and verify the required design input (e.g. MO-003465, MO-003520 #4281).</div>
+                </td>
+              </tr>
+
+              <tr class="row-warning">
+                <td class="team-cell">
+                  <div class="team-name text-amber">Mechanical Test</div>
+                  <div class="team-lead-note">T&V Argeș</div>
+                </td>
+                <td class="hours-cell">
+                  <span class="workload-bold text-amber">193.4</span> / <span class="cap-dim">200 h</span>
+                  <div class="pct-badge amber-badge">96.7% Load</div>
+                </td>
+                <td>
+                  <div class="utilization-bar">
+                    <div class="util-fill amber" style="width: 96.7%;"></div>
+                  </div>
+                </td>
+                <td class="decision-cell">
+                  <div class="decision-text text-amber">
+                    <strong>Tight in W40.</strong> Mircea Butoi shows <strong>80.2 h against 40 h</strong> in the capture.
+                  </div>
+                  <div class="tag-recommendation warning-tag">Requires row/booking verification before treating that as executable capacity.</div>
+                </td>
+              </tr>
+
+              <tr class="row-danger">
+                <td class="team-cell">
+                  <div class="team-name text-red">Endurance</div>
+                  <div class="team-lead-note">T&V Argeș / Proving Ground</div>
+                </td>
+                <td class="hours-cell">
+                  <span class="workload-bold text-red">208</span> / <span class="cap-dim">200 h</span>
+                  <div class="pct-badge red-badge">104.0% Over</div>
+                </td>
+                <td>
+                  <div class="utilization-bar">
+                    <div class="util-fill red" style="width: 100%;"></div>
+                  </div>
+                </td>
+                <td class="decision-cell">
+                  <div class="decision-text text-red">
+                    <strong>Tight in W40.</strong> Driver 1 has <strong>51 / 40 h</strong> and Darius Serban <strong>41 / 40 h</strong>.
+                  </div>
+                  <div class="tag-recommendation danger-tag">Protect the COMPACT battery test slot and resolve competing allocations.</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Timesheet Reconciliation Methodology Box -->
+      <div class="methodology-card">
+        <div class="methodology-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          <h4>Timesheet Organization Filter Audit (Sunday 27-Sep Analysis)</h4>
+        </div>
+        <div class="methodology-body">
+          <p>
+            For the Timesheet organization filter, column D (<code>Organization</code>) was examined across <strong>45,454 rows</strong>:
+          </p>
+          <div class="methodology-pills">
+            <span class="filter-pill green"><strong>5,904</strong> Arges R&D retained</span>
+            <span class="filter-pill green"><strong>2,636</strong> T&V Arges retained</span>
+            <span class="filter-pill gray"><strong>36,914</strong> excluded rows</span>
+            <span class="filter-pill blue"><strong>8,540</strong> total retained rows</span>
+          </div>
+          <p class="methodology-footnote">
+            <em>No other Arges labels left ambiguous. Note: The W40 capacity figures come from the separate weekly capture, not from a sum of Timesheet actuals.</em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 6: DELIVERY CONFIDENCE (N / N+1 / N+2) -->
+    <!-- ========================================== -->
+    <div id="tab-confidence" class="tab-pane">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="badge-pill cyan">PORTFOLIO HORIZONS (47 ACTIVE MOS)</div>
+          <h2>N / N+1 / N+2 Delivery Confidence</h2>
+          <p class="section-subtitle">
+            These counts use <strong>unique active Alexandru MOs and Dataset forecast Last TR dates</strong>, with no verified monthly Forecast list. “Confidence” below is an evidence judgment, <strong>not an invented probability</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Horizon Confidence Cards -->
+      <div class="horizon-grid">
+        <!-- N — September -->
+        <div class="horizon-card horizon-red">
+          <div class="horizon-header">
+            <div class="horizon-title-row">
+              <span class="horizon-badge red">N — September 2026</span>
+              <span class="horizon-count">9 MOs</span>
+            </div>
+            <div class="horizon-confidence-rating red-text">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              LOW CONFIDENCE AS A GROUP
+            </div>
+          </div>
+          <div class="horizon-body">
+            <p class="horizon-desc">
+              Seven have explicit incomplete or late planning evidence; two lack a matched plan. Confirm delivered TRs individually before counting September output.
+            </p>
+            <div class="mo-code-list">
+              <span class="mo-chip">MO-003582</span>
+              <span class="mo-chip">MO-003218</span>
+              <span class="mo-chip">MO-003532</span>
+              <span class="mo-chip">MO-003551</span>
+              <span class="mo-chip">MO-003473</span>
+              <span class="mo-chip">MO-003436</span>
+              <span class="mo-chip">MO-003520</span>
+              <span class="mo-chip">MO-003102</span>
+              <span class="mo-chip">MO-003484</span>
+            </div>
+          </div>
+          <div class="horizon-footer">
+            <strong>Action:</strong> Gate review Monday morning; do not count as delivery without factory TR proof.
+          </div>
+        </div>
+
+        <!-- N+1 — October -->
+        <div class="horizon-card horizon-amber">
+          <div class="horizon-header">
+            <div class="horizon-title-row">
+              <span class="horizon-badge amber">N+1 — October 2026</span>
+              <span class="horizon-count">7 MOs</span>
+            </div>
+            <div class="horizon-confidence-rating amber-text">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              MIXED, MATERIAL TEST & PLAN GAPS
+            </div>
+          </div>
+          <div class="horizon-body">
+            <p class="horizon-desc">
+              MO-003609 has no matched plan; MO-002519 and MO-003412 contain overdue 0% rows; MO-003465 needs its test handoff.
+            </p>
+            <div class="mo-code-list">
+              <span class="mo-chip">MO-003465</span>
+              <span class="mo-chip">MO-003609</span>
+              <span class="mo-chip">MO-003592</span>
+              <span class="mo-chip">MO-003584</span>
+              <span class="mo-chip">MO-002519</span>
+              <span class="mo-chip">MO-003412</span>
+              <span class="mo-chip">MO-003596</span>
+            </div>
+          </div>
+          <div class="horizon-footer">
+            <strong>Action:</strong> Secure test handoffs & create missing plan rows during W40.
+          </div>
+        </div>
+
+        <!-- N+2 — November -->
+        <div class="horizon-card horizon-purple">
+          <div class="horizon-header">
+            <div class="horizon-title-row">
+              <span class="horizon-badge purple">N+2 — November 2026</span>
+              <span class="horizon-count">3 MOs</span>
+            </div>
+            <div class="horizon-confidence-rating purple-text">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              LOW CONFIDENCE FOR CURRENT DATES
+            </div>
+          </div>
+          <div class="horizon-body">
+            <p class="horizon-desc">
+              MO-003219 and MO-003474 have plans extending into <strong>2027</strong>; MO-003460 has a September plan finish with remaining test/design evidence.
+            </p>
+            <div class="mo-code-list">
+              <span class="mo-chip">MO-003219</span>
+              <span class="mo-chip">MO-003474</span>
+              <span class="mo-chip">MO-003460</span>
+            </div>
+          </div>
+          <div class="horizon-footer">
+            <strong>Action:</strong> Arbitrate 2027 plan stretch vs 30 Nov Dataset Last TR.
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Reconciliation Queue Breakdown -->
+      <div class="portfolio-breakdown-card">
+        <div class="p-card-header">
+          <h3>Full Portfolio Accounting — All 47 Active MOs ("In Engineering Work")</h3>
+          <span class="meta-pill blue">Owner: Alexandru TIRON</span>
+        </div>
+        <div class="p-breakdown-grid">
+          <div class="breakdown-stat-box red-border">
+            <div class="b-num">13</div>
+            <div class="b-title">Pre-September Carry-Over</div>
+            <div class="b-desc">Dates before September still marked "In engineering Work". Separate reconciliation queue. Several have completed Sciforma plans (e.g. STAR10 MO-003195 @ 100% in April). Check factory TR handover.</div>
+          </div>
+
+          <div class="breakdown-stat-box red-border">
+            <div class="b-num">9</div>
+            <div class="b-title">N — September 2026</div>
+            <div class="b-desc">Immediate closeout focus for Monday 28 Sep. 7 have late/incomplete planning evidence, 2 lack Sciforma plan.</div>
+          </div>
+
+          <div class="breakdown-stat-box amber-border">
+            <div class="b-num">7</div>
+            <div class="b-title">N+1 — October 2026</div>
+            <div class="b-desc">Test sequences, named assignments, and plan creations required in W40 to secure October delivery.</div>
+          </div>
+
+          <div class="breakdown-stat-box purple-border">
+            <div class="b-num">3</div>
+            <div class="b-title">N+2 — November 2026</div>
+            <div class="b-desc">Heavy date conflict with Sciforma plans continuing into 2027 (e.g. MO-003219, MO-003474).</div>
+          </div>
+
+          <div class="breakdown-stat-box blue-border">
+            <div class="b-num">15</div>
+            <div class="b-title">Future (Dec 2026+)</div>
+            <div class="b-desc">Scheduled for December 2026 or later. Totaling exactly 47 active initiatives assigned to Alexandru.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 7: WHAT THE SYSTEMS DISAGREE ABOUT -->
+    <!-- ========================================== -->
+    <div id="tab-discrepancies" class="tab-pane">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="badge-pill orange">SYSTEM DESYNCHRONIZATION AUDIT</div>
+          <h2>What the systems disagree about</h2>
+          <p class="section-subtitle">
+            Cross-system audit between <code>Dataset_New.csv</code>, <code>Sciforma Planning Extract</code>, and <code>ARAS Timesheet</code> based on the Sunday 27 September analysis.
+          </p>
+        </div>
+      </div>
+
+      <div class="discrepancy-grid">
+        <!-- Item 1 -->
+        <div class="disc-card">
+          <div class="disc-badge orange">DISCREPANCY 1</div>
+          <h3 class="disc-title">Dataset Last TR versus Sciforma Finish</h3>
+          <p class="disc-text">
+            A summary Finish is not itself a scoped Last TR, so the action is to establish the release scope and correct the appropriate date.
+          </p>
+          <div class="disc-examples">
+            <div class="disc-example-row">
+              <span class="disc-mo">MO-003102</span>
+              <span class="disc-conflict">Dataset: <strong>30 Sep</strong> vs Sciforma #4499: <strong>20 Nov (0%)</strong></span>
+            </div>
+            <div class="disc-example-row">
+              <span class="disc-mo">MO-003436</span>
+              <span class="disc-conflict">Dataset: <strong>30 Sep</strong> vs Sciforma #3964: <strong>19 Nov (0%)</strong></span>
+            </div>
+            <div class="disc-example-row">
+              <span class="disc-mo">MO-003218</span>
+              <span class="disc-conflict">Dataset: <strong>18 Sep (PASSED)</strong> vs Sciforma #2990: <strong>23 Oct (0%)</strong></span>
+            </div>
+          </div>
+          <div class="disc-action">
+            <strong>Monday Action:</strong> Arbitrate actual release scope vs complete project scope in gate review.
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="disc-card">
+          <div class="disc-badge amber">DISCREPANCY 2</div>
+          <h3 class="disc-title">Dataset State versus Old Completed Plans</h3>
+          <p class="disc-text">
+            Examples include <strong>INI-108726 / MO-003195, STAR10 battery downsizing</strong>, whose plan rows <strong>#2940–2941 are 100%</strong> in April while Dataset still says <em>“In engineering Work”</em> with an April Last TR.
+          </p>
+          <div class="disc-callout">
+            Confirm the factory TR handover and update the master state if warranted; completed planning alone is insufficient proof.
+          </div>
+          <div class="disc-action">
+            <strong>Monday Action:</strong> Check factory release note. If delivered, update Dataset to Delivered/Closed to unburden Alexandru's active queue.
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="disc-card">
+          <div class="disc-badge red">DISCREPANCY 3</div>
+          <h3 class="disc-title">Missing Executable Planning (Ghost Plans)</h3>
+          <p class="disc-text">
+            <strong>MO-003582</strong> (Ukrainian user manual translation), <strong>MO-003551</strong> (HA16 HYDAC-to-Valvole manifold), <strong>MO-003609</strong> (COMPACT AE steering sensor), and several older/later active MOs have <strong>no matching MO Planning #</strong> in this extract.
+          </p>
+          <div class="disc-callout">
+            The exact correction is to establish whether another plan ID exists, then add the scope, activities, dates and accountable assignments.
+          </div>
+          <div class="disc-action">
+            <strong>Monday Action:</strong> Demand plan IDs from work owners; do not treat unbacked dates as executable.
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="disc-card">
+          <div class="disc-badge blue">DISCREPANCY 4</div>
+          <h3 class="disc-title">ARAS-versus-Sciforma Demand</h3>
+          <p class="disc-text">
+            Both extracts are available, but this pass has <strong>not established a scope-equivalent, discipline-level variance for every one of the 47 MOs</strong>.
+          </p>
+          <div class="disc-callout">
+            I am therefore not labelling any individual as underplanned from hours alone. Tracking and the monthly Forecast were unavailable in <code>/JARVIS/</code>, so their disagreements cannot be asserted.
+          </div>
+          <div class="disc-action">
+            <strong>Monday Action:</strong> Avoid speculative underplanning claims; ground decisions strictly on concrete deliverable proof.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal for Initiative Detail & Decision Editor -->
+  <div id="detail-modal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span id="modal-category-badge" class="badge-pill red">DO TODAY</span>
+          <h3 id="modal-mo-title">INI-109873 / MO-003520</h3>
+          <div id="modal-mo-subtitle" class="modal-sub">EN 280-1 update, HA20RTJ R2</div>
+        </div>
+        <button id="modal-close-btn" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Planning Evidence & Owners</h4>
+          <div id="modal-planning-evidence" class="modal-code-block"></div>
+        </div>
+        <div class="modal-section">
+          <h4>Required Action</h4>
+          <p id="modal-action-text" class="modal-action-desc"></p>
+        </div>
+        <div class="modal-section">
+          <h4>Monday Gate Decision & Notes</h4>
+          <div class="modal-decision-controls">
+            <label>Decision Status:</label>
+            <select id="modal-status-select" class="select-input modal-select">
+              <option value="pending">⏳ Pending Gate Review</option>
+              <option value="verified">✅ Deliverable Verified / Handed Over</option>
+              <option value="escalated">⚠️ Escalate Date / Reject 30 Sep Commitment</option>
+              <option value="missing-plan">🔍 Request Sciforma Plan & Owners</option>
+            </select>
+          </div>
+          <div class="modal-notes-wrap">
+            <label>Meeting Notes / Owner Response:</label>
+            <textarea id="modal-notes-input" placeholder="Enter findings from Mechanical Design, System Test, or Work Owner..." rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="modal-copy-btn" class="btn btn-secondary">Copy Item Details</button>
+        <button id="modal-save-btn" class="btn btn-primary">Save Decision & Notes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Generator Modal -->
+  <div id="script-modal" class="modal-backdrop">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="badge-pill blue">STANDUP / BRIEFING RUNBOOK</span>
+          <h3>Monday Morning Standup Script — Alexandru TIRON</h3>
+          <div class="modal-sub">Ready to copy for Microsoft Teams, Email, or Daily Gate Review Meeting</div>
+        </div>
+        <button id="script-modal-close-btn" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="script-preview-toolbar">
+          <button id="btn-copy-script-text" class="btn btn-primary btn-sm">Copy Script to Clipboard</button>
+        </div>
+        <pre id="script-text-content" class="script-code-block"></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Action copied to clipboard!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
